@@ -17,13 +17,8 @@ import RNFS from 'react-native-fs';
 
 export default class AwesomeProject extends Component {
   _handleButtonPress = () => {
-    RNFS.unlink(path)
-      .then((success) => {
-        Alert.alert('FILE WRITTEN!');
-      })
-      .catch((err) => {
-        Alert.alert(err.message);
-      });
+    RNFS.unlink(RNFS.ExternalStorageDirectoryPath);
+    Alert.alert('Something went wrong. Please try Again');
   };
 
   render() {
@@ -36,7 +31,6 @@ export default class AwesomeProject extends Component {
           title="Start Game"
           onPress={this._handleButtonPress}
         />
-
       </View>
     );
   }
