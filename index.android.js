@@ -28,7 +28,20 @@ export default class AwesomeProject extends Component {
          ConFusion
         </Text>
         <Button
+          style={styles.button}
           title="Start Game"
+          onPress={this._handleButtonPress}
+        />
+        <Text/><Text/><Text/>
+        <Button
+          style={styles.button}
+          title="How"
+          onPress={this._handleButtonPress}
+        />
+        <Text/><Text/><Text/>
+        <Button
+          style={styles.button}
+          title="Why"
           onPress={this._handleButtonPress}
         />
       </View>
