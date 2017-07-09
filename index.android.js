@@ -13,13 +13,17 @@ import {
   Button,
   Alert
 } from 'react-native';
+import RNFS from 'react-native-fs';
 
 export default class AwesomeProject extends Component {
   _handleButtonPress = () => {
-    Alert.alert(
-      'Hurray !!!',
-      'You did it!',
-    );
+    RNFS.unlink(path)
+      .then((success) => {
+        Alert.alert('FILE WRITTEN!');
+      })
+      .catch((err) => {
+        Alert.alert(err.message);
+      });
   };
 
   render() {
